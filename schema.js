@@ -97,4 +97,3 @@ export const typeDefs = `#graphql
   }
 
 `;
-`
