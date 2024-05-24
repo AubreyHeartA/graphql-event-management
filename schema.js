@@ -37,9 +37,6 @@ export const typeDefs = `#graphql
   }
 
   type Mutation {
-    createVenue(name: String!, location: String!): Venue!
-    createEvent(name: String!, date: String!, venues: [ID!]!): Event!
-    createTicket(events: [ID!]!, seatNo: String!): Ticket!
-    createAttendee(name: String!, email: String!): Attendee!
+    
   }
 `

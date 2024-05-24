@@ -46,28 +46,6 @@ const resolvers = {
     Attendee: {
         tickets: (parent) => parent.tickets.map((id) => db.tickets.find((t) => t.id === id)),
     },
-    Mutation: {
-        createVenue: (_, { name, location }) => {
-          const newVenue = { id: String(db.venues.length + 1), name, location };
-          db.venues.push(newVenue);
-          return newVenue;
-        },
-        createEvent: (_, { name, date, venues }) => {
-          const newEvent = { id: String(db.events.length + 1), name, date, venues };
-          db.events.push(newEvent);
-          return newEvent;
-        },
-        createTicket: (_, { events, seatNo }) => {
-          const newTicket = { id: String(db.tickets.length + 1), events, seatNo };
-          db.tickets.push(newTicket);
-          return newTicket;
-        },
-        createAttendee: (_, { name, email }) => {
-          const newAttendee = { id: String(db.attendees.length + 1), name, email, tickets: [] };
-          db.attendees.push(newAttendee);
-          return newAttendee;
-        },
-    },
 };
 
 
