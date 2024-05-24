@@ -34,13 +34,14 @@ const resolvers = {
           return db.attendees.find((attendee) => attendee.id === id);
         }
       },
-    //  return db.venues.filter((v) => v.event.venue === parent.id) --ignore this comment
     Event: {
         venues: (parent) => parent.venues.map((id) => db.venues.find((v) => v.id === id)),
+        // venues(parent) {        
+        //     return parent.venues.map(itemId => db.venues.find(item => item.id === itemId))
+        // }
     },
     Ticket: {
         events: (parent) => parent.events.map((id) => db.events.find((e) => e.id === id)),
-        users: (parent) => parent.users.map((id) => db.attendees.find((a) => a.id === id)),
     },
     Attendee: {
         tickets: (parent) => parent.tickets.map((id) => db.tickets.find((t) => t.id === id)),
@@ -56,8 +57,8 @@ const resolvers = {
           db.events.push(newEvent);
           return newEvent;
         },
-        createTicket: (_, { events, users, seatNo }) => {
-          const newTicket = { id: String(db.tickets.length + 1), events, users, seatNo };
+        createTicket: (_, { events, seatNo }) => {
+          const newTicket = { id: String(db.tickets.length + 1), events, seatNo };
           db.tickets.push(newTicket);
           return newTicket;
         },

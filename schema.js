@@ -15,7 +15,6 @@ export const typeDefs = `#graphql
   type Ticket {
     id: ID!
     events: [Event!]!
-    users: [Attendee!]!
     seatNo: String!
   }
 
@@ -40,7 +39,7 @@ export const typeDefs = `#graphql
   type Mutation {
     createVenue(name: String!, location: String!): Venue!
     createEvent(name: String!, date: String!, venues: [ID!]!): Event!
-    createTicket(events: [ID!]!, users: [ID!]!, seatNo: String!): Ticket!
+    createTicket(events: [ID!]!, seatNo: String!): Ticket!
     createAttendee(name: String!, email: String!): Attendee!
   }
 `

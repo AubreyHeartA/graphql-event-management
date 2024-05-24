@@ -15,11 +15,11 @@ const events = [
 ];
   
 const tickets = [
-    { id: '1', events: ['1'], users: ['1'], seatNo: '1' },
-    { id: '2', events: ['2'], users: ['2'], seatNo: '2' },
-    { id: '3', events: ['3'], users: ['3'], seatNo: '1' },
-    { id: '4', events: ['4'], users: ['4'], seatNo: '1' },
-    { id: '5', events: ['5'], users: ['5'], seatNo: '1' },
+    { id: '1', events: ['1'], seatNo: '1' },
+    { id: '2', events: ['2'], seatNo: '2' },
+    { id: '3', events: ['3'], seatNo: '1' },
+    { id: '4', events: ['4'], seatNo: '1' },
+    { id: '5', events: ['5'], seatNo: '1' },
 ];
   
 const attendees = [
