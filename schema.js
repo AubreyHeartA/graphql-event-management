@@ -27,14 +27,14 @@ export const typeDefs = `#graphql
   }
 
   type Query {
-    venues: [Venue]
-    venue:(id: ID!): Venue
-    events: [Event]
-    event:(id: ID!): Event
-    tickets: [Ticket]
-    ticket:(id: ID!): Ticket
-    attendees: [Attendee]
-    attendee:(id: ID!): Attendee
+    venues: [Venue!]!
+    venue(id: ID!): Venue
+    events: [Event!]!
+    event(id: ID!): Event
+    tickets: [Ticket!]!
+    ticket(id: ID!): Ticket
+    attendees: [Attendee!]!
+    attendee(id: ID!): Attendee
   }
 
   type Mutation {
