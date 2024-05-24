@@ -35,6 +35,7 @@ export const typeDefs = `#graphql
     attendees: [Attendee!]!
     attendee(id: ID!): Attendee
   }
+
   type Mutation {
     addVenue(venue: AddVenueInput!): Venue
     deleteVenue(id: ID!): [Venue]
@@ -96,3 +97,4 @@ export const typeDefs = `#graphql
   }
 
 `;
+`
