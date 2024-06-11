@@ -46,6 +46,7 @@ const resolvers = {
   Attendee: {
     tickets: (parent) => parent.tickets.map((id) => db.tickets.find((t) => t.id === id)),
   },
+  
   Mutation:{
     //Venues
     // Deletes a venue by ID, throws an error if the venue doesn't exist
